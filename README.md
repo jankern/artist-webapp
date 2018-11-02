@@ -39,6 +39,7 @@ Run Redaxo CMS in Docker container
 ```
 $ npm run docker-compose-up
 ```
+Run Application on http://localhost:20180/
 
 
 
