@@ -1,0 +1,25 @@
+package: yform
+version: '2.2'
+author: Jan Kristinus, Gregor Harlan
+supportpage: www.redaxo.org/de/forum/
+
+page:
+    title: 'translate:yform'
+    pjax: false
+    icon: rex-icon fa-hand-spock-o
+    subpages:
+        overview: { title: 'translate:overview', perm: admin }
+
+stylesheets:
+    - yform.css
+    - popup.css
+
+requires:
+    packages:
+        phpmailer: '^2.0.0'
+    redaxo: '^5.2.0'
+
+system_plugins:
+    - docs
+    - manager
+    - email

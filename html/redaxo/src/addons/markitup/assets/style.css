@@ -1,0 +1,241 @@
+.markItUpContainer .markItUpHeader {
+	background-color: #324050;
+	border: 1px solid #eee;
+	border-bottom: 0px;
+}
+
+.markItUpContainer .markItUpHeader ul {
+	list-style:none;
+	padding:0px;
+}
+
+.markItUpContainer .markItUpHeader > ul > li {
+	display:inline-block;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpDropMenu {
+	position:relative;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpDropMenu ul {
+	border-top: 1px solid #9ca5b2;
+	display:none;
+	position:absolute;
+	left:0px;
+	top:34px;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpDropMenu > ul > li {
+	background-color: #324050;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpDropMenu > ul > li > a {
+	color:#9ca5b2;
+	display:block;
+	height: 34px;
+	line-height: 34px;
+	padding: 0px 10px;
+	white-space: nowrap;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpDropMenu > ul > li > a:hover {
+	background-color:#283542;
+	color:#4b9ad9;
+	text-decoration:none;
+}
+
+.markItUpContainer .markItUpHeader > ul > li > a {
+	display:block;
+	height:34px;
+	line-height:34px;
+	text-align:center;
+	width:34px;
+}
+
+.markItUpContainer .markItUpHeader > ul > li > a:before {
+	color:#9ca5b2;
+	font-family: 'FontAwesome';
+	font-size: 14px;
+	position:relative;
+}
+
+.markItUpContainer .markItUpHeader > ul > li > a:after {
+	color:#9ca5b2;
+	font-size: 14px;
+}
+
+.markItUpContainer .markItUpHeader > ul > li a:hover {
+	background-color:#283542;
+	text-decoration:none;
+}
+
+.markItUpContainer .markItUpHeader > ul > li a:hover:before {
+	color: #4b9ad9;
+}
+
+.markItUpContainer .markItUpHeader > ul > li a:hover:after {
+	color: #4b9ad9;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.bold > a:before {
+	content: "\f032";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.clips > a:before {
+	content: "\f009";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.code > a:before {
+	content: "\f121";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.deleted > a:before {
+	content: "\f0cc";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.emaillink > a:before {
+	content: "\f0c1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.emaillink > a:after {
+	content: "@";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.externallink > a:before {
+	content: "\f0c1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.externallink > a:after {
+	content: "E";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.italic > a:before {
+	content: "\f033";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.groupheading > a:before {
+	content: "\f1dc";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.grouplink > a:before {
+	content: "\f0c1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading1 > a:before,
+.markItUpContainer .markItUpHeader > ul > li.heading2 > a:before,
+.markItUpContainer .markItUpHeader > ul > li.heading3 > a:before,
+.markItUpContainer .markItUpHeader > ul > li.heading4 > a:before,
+.markItUpContainer .markItUpHeader > ul > li.heading5 > a:before,
+.markItUpContainer .markItUpHeader > ul > li.heading6 > a:before {
+	content: "\f1dc";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading1 > a:after {
+	content: "1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading2 > a:after {
+	content: "2";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading3 > a:after {
+	content: "3";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading4 > a:after {
+	content: "4";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading5 > a:after {
+	content: "5";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.heading6 > a:after {
+	content: "6";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.internallink > a:before {
+	content: "\f0c1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.internallink > a:after {
+	content: "I";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.media {
+	/* reset rules from be_style */
+	overflow:visible;
+	margin-top:0px;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.media > a:before {
+	content: "\f03e";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.medialink > a:before {
+	content: "\f0c1";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.medialink > a:after {
+	content: "M";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.orderedlist > a:before {
+	content: "\f0cb";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.paragraph > a:before {
+	content: "\f1dd";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.quote > a:before {
+	content: "\f10d";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.sub > a:before {
+	content: "\f12c";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.sup > a:before {
+	content: "\f12b";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.table {
+	margin:0px;
+	max-width:none;
+	width:auto;
+}
+
+.markItUpContainer .markItUpHeader > ul > li.table > a:before {
+	content: "\f0ce";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.underline > a:before {
+	content: "\f0cd";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.unorderedlist > a:before {
+	content: "\f0ca";
+}
+
+.markItUpContainer .markItUpHeader > ul > li.markItUpSeparator {
+	background-color: #9ca5b2;
+	font-size: 0px;
+	height: 24px;
+	line-height: 34px;
+	margin: 0px 10px;
+	padding: 0px;
+	width: 2px;
+}
+
+.markItUpContainer textarea {
+	background-color:#FFFFFF;
+	box-shadow: none;
+	border: 1px solid #eee;
+	min-height: 250px;
+}
+
+.markItUpContainer textarea:focus {
+	box-shadow: none;
+	border: 1px solid #eee;
+}

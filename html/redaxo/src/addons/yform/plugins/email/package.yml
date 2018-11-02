@@ -1,0 +1,11 @@
+package: yform/email
+version: '2.1'
+author: 'Jan Kristinus'
+supportpage: www.redaxo.org/de/forum/
+
+page:
+    title: 'translate:yform_email_templates'
+    perm: yform[email]
+    pjax: true
+    subpages:
+        index: { title: 'translate:overview', hidden: true }

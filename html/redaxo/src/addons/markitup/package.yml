@@ -1,0 +1,15 @@
+package: markitup
+version: '3.0.2'
+author: Friends Of REDAXO
+supportpage: github.com/FriendsOfREDAXO/markitup
+
+page:
+    title: 'translate:title'
+    perm: markitup[]
+    pjax: true
+    subpages:
+        profiles: { title: 'translate:profiles', perm: markitup[profiles] }
+
+conflicts:
+    packages:
+        textile: '*'

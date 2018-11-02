@@ -1,0 +1,11 @@
+package: redactor2
+version: '3.4.2'
+author: Friends Of REDAXO
+supportpage: github.com/FriendsOfREDAXO/redactor2
+
+page:
+    title: 'translate:title'
+    perm: redactor2[]
+    pjax: true
+    subpages:
+        profiles: { title: 'translate:profiles', perm: redactor2[profiles] }

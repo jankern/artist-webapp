@@ -1,0 +1,54 @@
+/* Style sheet to define vraiable values to be used across all files */
+
+// Font weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Base Font
+$base-font-family: sans-serif;
+$base-font:"Roboto";
+$base-font-weight: $light;
+$base-font-size: 18px;
+$base-line-height: 26px;
+
+// Corporate logo font
+$coprorate-font-family: sans-serif;
+$coprorate-font:"SansitaOne";
+$coprorate-font-weight: $regular;
+$coprorate-font-size: 18px;
+$coprorate-line-height: 26px;
+
+// Colors
+$base-black:#000000;
+$base-black-light:#333333;
+
+$base-white:#FFFFFF;
+$base-white-medium:#EFF3F5;
+
+$base-grey-light:#eff2f7;
+$base-grey:#E1E4E9;
+$base-grey-dark:#babbbc;
+
+$primary-light: #E4EFF7;
+$primary-regular: #C2D5EA;
+$primary-medium-dark: #90a7c1;
+$primary-dark:#6D87A3;
+
+$input-button-regular:#90a7c1;
+$input-button-dark:#6D87A3;
+
+$oxseco-blue:#001d3b;
+$oxseco-red:#c41a35;
+
+$input-error:#ea3515;
+$input-error-light:#f4a8a8;
+$input-error-medium-dark:#c22d13;
+$input-error-dark:#8f291a;
+
+$message-error:#f9d1d1;
+$message-error-dark:#f4a8a8;
+$message-warn:#F4E271;
+$message-info:#bfe8ae;
+$message-info-dark:#8ebc7a;

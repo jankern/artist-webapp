@@ -1,0 +1,39 @@
+package: demo_base
+version: 2.6.1
+author: 'Friends Of REDAXO'
+supportpage: 'https://github.com/FriendsOfREDAXO/demo_base'
+page:
+    title: Basis-Demo
+    perm: 'demo_base[]'
+    pjax: true
+    subpages:
+        install: { title: 'translate:title' }
+requires:
+    packages:
+        backup: '>=2.0.4'
+        structure/content: '>=2.3.0'
+        markitup: '>=3.0.0'
+        phpmailer: '>=2.1.2'
+        redactor2: '>=3.4.0'
+        sprog: '>=1.0.0'
+        yform: '>=2.2'
+    redaxo: '>=5.3.0'
+setup:
+    packages:
+        markitup: 2078
+        phpmailer: 1821
+        redactor2: 2074
+        sprog: 1446
+        yform: 1986
+    installSequence:
+        - backup
+        - structure/content
+        - phpmailer
+        - markitup
+        - redactor2
+        - sprog
+        - yform
+    dbimport:
+        - demo_base.sql
+    fileimport:
+        - demo_base.tar.gz

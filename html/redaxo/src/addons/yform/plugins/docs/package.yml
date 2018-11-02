@@ -1,0 +1,8 @@
+package: yform/docs
+version: '2.1'
+author: 'Jan Kristinus'
+supportpage: www.redaxo.org/de/forum/
+
+page:
+    title: translate:yform_docs
+    perm: admin

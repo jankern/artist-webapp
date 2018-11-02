@@ -1,0 +1,71 @@
+/* Style sheet to define mxin functions to dynamically return styles acorss all files */
+
+// mixin for browser compatible element shadows
+@mixin box-shadow($shadows) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+  }
+  
+// mixin for browser compatible corner shapes 
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+
+@mixin border-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+       -moz-border-top-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+        -ms-border-top-left-radius: $radius;
+     -ms-border-bottom-left-radius: $radius;
+            border-top-left-radius: $radius;
+       border-bottom-left-radius: $radius;
+ }
+
+@mixin border-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+ -webkit-border-bottom-right-radius: $radius;
+     -moz-border-top-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+      -ms-border-top-rightradius: $radius;
+   -ms-border-bottom-tight-radius: $radius;
+          border-top-right-radius: $radius;
+     border-bottom-right-radius: $radius;
+}
+
+// mixin for browser compatible opacity values
+@mixin opacity($value){
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+  }
+
+// mixin for browser compatible element spinnings
+@mixin spin-animation($seconds, $type, $duration){
+      -webkit-animation:spin $seconds $type $duration;
+      -moz-animation:spin $seconds $type $duration;
+      animation:spin $seconds $type $duration;
+  }
+  
+// mixin for browser compatible radial gradient
+@mixin radial-gradient($from, $to) {
+      background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+      background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+      background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+      background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+      background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+      background-color: $from;
+  }
+
+// mixin for browser compatible element shadow
+@mixin box-shadow($left:0px, $top:2px, $blur:3px, $color:#333, $inset:"") {
+    -webkit-box-shadow:$left $top $blur $color #{$inset};
+    -moz-box-shadow:$left $top $blur $color #{$inset};
+    box-shadow:$left $top $blur $color #{$inset};
+  }

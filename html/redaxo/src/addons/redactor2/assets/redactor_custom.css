@@ -1,0 +1,92 @@
+.redactor-air li a.re-button,
+.redactor-toolbar li a.re-button {
+	font-size:14px;
+}
+
+.re-heading1,
+.re-heading2,
+.re-heading3,
+.re-heading4,
+.re-heading5,
+.re-heading6,
+.re-emaillink,
+.re-externallink,
+.re-internallink,
+.re-medialink {
+	position:relative;
+}
+
+.re-heading1:after,
+.re-heading2:after,
+.re-heading3:after,
+.re-heading4:after,
+.re-heading5:after,
+.re-heading6:after,
+.re-emaillink:after,
+.re-externallink:after,
+.re-internallink:after,
+.re-medialink:after,
+.re-telephonelink:after {
+	font-size: 10px;
+	position: absolute;
+	bottom: 12px;
+	right: 8px;
+}
+
+.re-heading1:after {
+	content: "1";
+}
+.re-heading2:after {
+	content: "2";
+}
+.re-heading3:after {
+	content: "3";
+}
+.re-heading4:after {
+	content: "4";
+}
+.re-heading5:after {
+	content: "5";
+}
+.re-heading6:after {
+	content: "6";
+}
+.re-emaillink:after {
+	content: "@";
+}
+.re-externallink:after {
+	content: "E";
+}
+.re-internallink:after {
+	content: "I";
+}
+.re-medialink:after {
+	content: "M";
+}
+.re-telephonelink:after {
+	content: "T";
+}
+
+.redactor-dropdown-groupheading1 span {
+	font-size:22px;
+}
+
+.redactor-dropdown-groupheading2 span {
+	font-size:20px;
+}
+
+.redactor-dropdown-groupheading3 span {
+	font-size:18px;
+}
+
+.redactor-dropdown-groupheading4 span {
+	font-size:16px;
+}
+
+.redactor-dropdown-groupheading5 span {
+	font-size:14px;
+}
+
+.redactor-dropdown-groupheading6 span {
+	font-size:12px;
+}

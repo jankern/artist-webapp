@@ -1,0 +1,176 @@
+/* Style sheet to define the basic layout */
+
+html, body{
+    height:100%;
+    min-height:100%;
+}
+
+body{
+    background-color:$base-grey-light;
+}
+
+header{
+    display:inline-block;
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+
+    @include box-shadow($left:0px, $top:4px, $blur:5px, $color:$base-grey, $inset:"");
+
+    nav{
+        display:inline-block;
+        float:right;
+    }
+
+    .header-title{
+        padding:10px;
+        display:inline-block;
+    }
+}
+
+main{
+    display:inline-block;
+    width:100%;
+    padding:20px;
+    min-height:calc(100% - 122px);
+    box-sizing:border-box;
+}
+
+aside{
+
+    display:block;
+    float:left;
+
+    &.side-menu{
+        width:250px;
+        padding-right:20px;
+        border-right:solid 1px $base-grey;
+    }
+
+    .item-menu{
+        padding:0 0 20px;
+        width:100%;
+    }
+
+    .tree-nav-close{
+        padding:20px;
+        background:$base-grey-light;
+        width:100%;
+        box-sizing:border-box;
+
+        @include box-shadow($left:0px, $top:4px, $blur:5px, $color:$base-grey, $inset:"");
+
+        .btn{
+            padding:12px 0px;
+        }
+    }
+
+    .tree-nav{
+
+        padding:20px 0;
+
+        i[class^="icon-"], i[class*=" icon-"]{
+            font-size:1.2em;
+            vertical-align: -3px;
+        }
+        li{
+            line-height:1.8em; 
+        }
+        ul.lev-2{
+            li{
+                padding-left:20px;
+            }
+            
+        }
+        ul.lev-3{
+            li{
+                padding-left:40px;
+            }
+        }
+    }
+}
+
+.content{
+    
+    float:left;
+    width:calc(100% - 274px);
+    padding-left:20px;
+    box-sizing:border-box;
+
+    nav.content-nav{
+        display:block;
+        padding:0px;
+        box-sizing:border-box;
+        width:100%;
+        text-align:right;
+    }
+
+    .content-breadcrumb{
+        width:100%;
+        font-size: 0.9em;
+        padding-top:5px;
+        border-top:solid 1px $base-grey;
+
+        span{
+            margin: 0 10px;
+        }
+
+        i[class^="icon-"], i[class*=" icon-"]{
+            vertical-align:-4px;
+            font-size:1.3em;
+        }
+    }
+
+}
+
+footer{
+    position:fixed;
+    bottom:0px;
+    box-sizing:border-box;
+    width:100%;
+    background-color:$base-grey;
+    padding:20px;
+    border-top:solid 1px $base-grey;
+}
+
+.mobile-view{
+    display:none;
+}
+
+.desktop-view{
+    display:inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mobile-view{
+        display:inline-block;
+    }
+
+    .desktop-view{
+        display:none;
+    }
+
+    aside{
+        display:none;
+        position:fixed;
+        top:0px;
+        left:0px;
+        height:100%;
+        background: $base-white;
+        border-right:solid 2px $base-grey;
+
+        &.side-menu{
+            padding-right:0px;
+        }
+        
+        .tree-nav{
+            padding:20px;
+        }
+    }
+
+    .content{
+        width:100%;
+        padding-left:0px;
+    }
+}

@@ -1,0 +1,285 @@
+bold:
+    name: profiles_buttons_bold
+    key: B
+    className: bold
+    openWith:
+        markdown: "**"
+        textile: "*"
+    closeWith:
+        markdown: "**"
+        textile: "*"
+
+code:
+    name: profiles_buttons_code
+    className: code
+    openWith:
+        markdown: "```"
+        textile: "@"
+    closeWith:
+        markdown: "```"
+        textile: "@"
+
+clips:
+    name: profiles_buttons_clips
+    className: clips
+
+deleted:
+    name: profiles_buttons_deleted
+    key: S
+    className: deleted
+    openWith:
+        markdown: "~~"
+        textile: "-"
+    closeWith:
+        markdown: "~~"
+        textile: "-"
+
+emaillink:
+    name: profiles_buttons_emaillink
+    className: emaillink
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownLinkMailtoCallback(h);}"
+        textile: "function(h) {return btnTextileLinkMailtoCallback(h);}"
+
+externallink:
+    name: profiles_buttons_externallink
+    className: externallink
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownLinkExternalCallback(h);}"
+        textile: "function(h) {return btnTextileLinkExternalCallback(h);}"
+
+groupheading:
+    name: profiles_buttons_groupheading
+    className: groupheading
+    children:
+        1:
+            name: profiles_buttons_groupheading_option_heading1
+            openWith:
+                markdown: '\n\n#'
+                textile: '\n\nh1. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+        2:
+            name: profiles_buttons_groupheading_option_heading2
+            openWith:
+                markdown: '\n\n##'
+                textile: '\n\nh2. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+        3:
+            name: profiles_buttons_groupheading_option_heading3
+            openWith:
+                markdown: '\n\n###'
+                textile: '\n\nh3. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+        4:
+            name: profiles_buttons_groupheading_option_heading4
+            openWith:
+                markdown: '\n\n####'
+                textile: '\n\nh4. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+        5:
+            name: profiles_buttons_groupheading_option_heading5
+            openWith:
+                markdown: '\n\n#####'
+                textile: '\n\nh5. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+        6:
+            name: profiles_buttons_groupheading_option_heading6
+            openWith:
+                markdown: '\n\n######'
+                textile: '\n\nh6. '
+            closeWith:
+                markdown: '\n\n'
+                textile: '\n\n'
+
+grouplink:
+    name: profiles_buttons_grouplink
+    className: grouplink
+    children:
+        file:
+            name: profiles_buttons_grouplink_option_file
+            replaceWith:
+                markdown: "function(h) {return btnMarkdownLinkMediaCallback(h);}"
+                textile: "function(h) {return btnTextileLinkMediaCallback(h);}"
+        internal:
+            name: profiles_buttons_grouplink_option_internal
+            replaceWith:
+                markdown: "function(h) {return btnMarkdownLinkInternalCallback(h);}"
+                textile: "function(h) {return btnTextileLinkInternalCallback(h);}"
+        external:
+            name: profiles_buttons_grouplink_option_external
+            replaceWith:
+                markdown: "function(h) {return btnMarkdownLinkExternalCallback(h);}"
+                textile: "function(h) {return btnTextileLinkExternalCallback(h);}"
+        mailto:
+            name: profiles_buttons_grouplink_option_mailto
+            replaceWith:
+                markdown: "function(h) {return btnMarkdownLinkMailtoCallback(h);}"
+                textile: "function(h) {return btnTextileLinkMailtoCallback(h);}"
+
+heading1:
+    name: profiles_buttons_heading1
+    className: heading1
+    openWith:
+        markdown: '\n\n# '
+        textile: '\n\nh1. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+heading2:
+    name: profiles_buttons_heading2
+    className: heading2
+    openWith:
+        markdown: '\n\n## '
+        textile: '\n\nh2. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+heading3:
+    name: profiles_buttons_heading3
+    className: heading3
+    openWith:
+        markdown: '\n\n### '
+        textile: '\n\nh3. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+heading4:
+    name: profiles_buttons_heading4
+    className: heading4
+    openWith:
+        markdown: '\n\n#### '
+        textile: '\n\nh4. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+heading5:
+    name: profiles_buttons_heading5
+    className: heading5
+    openWith:
+        markdown: '\n\n##### '
+        textile: '\n\nh5. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+heading6:
+    name: profiles_buttons_heading6
+    className: heading6
+    openWith:
+        markdown: '\n\n###### '
+        textile: '\n\nh6. '
+    closeWith:
+        markdown: '\n\n'
+        textile: '\n\n'
+
+internallink:
+    name: profiles_buttons_internallink
+    className: internallink
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownLinkInternalCallback(h);}"
+        textile: "function(h) {return btnTextileLinkInternalCallback(h);}"
+
+italic:
+    name: profiles_buttons_italic
+    key: I
+    className: italic
+    openWith:
+        markdown: "*"
+        textile: "_"
+    closeWith:
+        markdown: "*"
+        textile: "_"
+
+media:
+    name: profiles_buttons_media
+    className: media
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownMediaCallback(h);}"
+        textile: "function(h) {return btnTextileMediaCallback(h);}"
+
+medialink:
+    name: profiles_buttons_medialink
+    className: medialink
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownLinkMediaCallback(h);}"
+        textile: "function(h) {return btnTextileLinkMediaCallback(h);}"
+
+orderedlist:
+    name: profiles_buttons_orderedlist
+    className: orderedlist
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownOrderedlistCallback(h);}"
+        textile: "function(h) {return btnTextileOrderedlistCallback(h);}"
+
+paragraph:
+    name: profiles_buttons_paragraph
+    className: paragraph
+    openWith:
+        markdown: '\n\n'
+        textile: "p. "
+
+quote:
+    name: profiles_buttons_quote
+    className: quote
+    openWith:
+        markdown: "> "
+        textile: "bq. "
+
+sub:
+    name: profiles_buttons_sub
+    className: sub
+    openWith:
+        markdown: "~"
+        textile: "~"
+    closeWith:
+        markdown: "~"
+        textile: "~"
+
+sup:
+    name: profiles_buttons_sup
+    className: sup
+    openWith:
+        markdown: "^"
+        textile: "^"
+    closeWith:
+        markdown: "^"
+        textile: "^"
+
+table:
+    name: profiles_buttons_table
+    className: table
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownTableCallback(h);}"
+        textile: "function(h) {return btnTextileTableCallback(h);}"
+
+underline:
+    name: profiles_buttons_underline
+    key: U
+    className: underline
+    openWith:
+        markdown: "__"
+        textile: "+"
+    closeWith:
+        markdown: "__"
+        textile: "+"
+
+unorderedlist:
+    name: profiles_buttons_unorderedlist
+    className: unorderedlist
+    replaceWith:
+        markdown: "function(h) {return btnMarkdownUnorderedlistCallback(h);}"
+        textile: "function(h) {return btnTextileUnorderedlistCallback(h);}"

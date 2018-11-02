@@ -1,0 +1,81 @@
+redactor2_title = Redactor 2 Editor
+
+#subpage help
+redactor2_help_infotext = This addon allows usage of the Redactor 2 WYSIWYG editor in the backend.<br><br>Textarea fields with the class <i>redactorEditor2-%profileName%</i> will automatically be turned into a proper Redactor 2 editor field.<br>Example: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>You can setup multiple profiles with different configurations to use with the Redactor 2 editor in the backend. <br><br>You can even define your own skin for the editor using CSS. To do so, add a file called skin.css in the folder /assets/addons/redactor2
+
+#subpage profiles
+redactor2_profiles = Profiles
+redactor2_profiles_norowsmessage = No profiles were found
+
+redactor2_profiles_column_name = Name
+redactor2_profiles_column_description = Description
+redactor2_profiles_column_cssclass = CSS class
+
+redactor2_profiles_formcaption_add = Add profile
+redactor2_profiles_formcaption_edit = Edit profile
+
+redactor2_profiles_label_name = Name
+redactor2_profiles_label_description = Description
+redactor2_profiles_label_minheight = Minimal height
+redactor2_profiles_label_maxheight = Maximum height
+redactor2_profiles_label_characterlimit = Characterlimit
+redactor2_profiles_label_urltype = URL type
+redactor2_profiles_label_urltype_option_relative = Relative
+redactor2_profiles_label_urltype_option_absolute = Absolute
+redactor2_profiles_label_toolbarfixed = Toolbar fixed?
+redactor2_profiles_label_toolbarfixed_option_true = Yes
+redactor2_profiles_label_toolbarfixed_option_false = No
+redactor2_profiles_label_shortcuts = Shortcuts active?
+redactor2_profiles_label_shortcuts_option_true = Yes
+redactor2_profiles_label_shortcuts_option_false = No
+redactor2_profiles_label_linkify = Convert links automatically?
+redactor2_profiles_label_linkify_option_true = Yes
+redactor2_profiles_label_linkify_option_false = No
+redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins = Custom Plugins
+redactor2_profiles_label_redactorcustomplugins_help = Commaseparated with the Syntax "name:/path/to/plugin.js"
+
+redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text
+redactor2_profiles_plugins_blockquote_description = Inserts a quote
+redactor2_profiles_plugins_bold_description = Makes the highlighted text bold
+redactor2_profiles_plugins_cleaner_description = Removes all styles from the highlighted text
+redactor2_profiles_plugins_clips_description = Inserts predefined text snippets
+redactor2_profiles_plugins_deleted_description = Strikes-through the highlighted text
+redactor2_profiles_plugins_emaillink_description = Inserts a mailto link
+redactor2_profiles_plugins_externallink_description = Inserts an external link
+redactor2_profiles_plugins_fontcolor_description = Defines the font color
+redactor2_profiles_plugins_fontfamily_description = Defines the font family
+redactor2_profiles_plugins_fontsize_description = Defines the font size
+redactor2_profiles_plugins_fullscreen_description = Switches to fullscreen
+redactor2_profiles_plugins_groupheading_description = Inserts a headline via dropdown
+redactor2_profiles_plugins_grouplink_description = Inserts a link via dropdown
+redactor2_profiles_plugins_grouplist_description = Inserts a list via dropdown
+redactor2_profiles_plugins_heading1_description = Inserts a headline with size 1
+redactor2_profiles_plugins_heading2_description = Inserts a headline with size 2
+redactor2_profiles_plugins_heading3_description = Inserts a headline with size 3
+redactor2_profiles_plugins_heading4_description = Inserts a headline with size 4
+redactor2_profiles_plugins_heading5_description = Inserts a headline with size 5
+redactor2_profiles_plugins_heading6_description = Inserts a headline with size 6
+redactor2_profiles_plugins_horizontalrule_description = Inserts a horizontal rule
+redactor2_profiles_plugins_internallink_description = Inserts an internal link using the link map
+redactor2_profiles_plugins_italic_description = Makes the highlighted text italic
+redactor2_profiles_plugins_media_description = Inserts a image file using the mediapool
+redactor2_profiles_plugins_medialink_description = Inserts a link to a file in the mediapool
+redactor2_profiles_plugins_orderedlist_description = Inserts an ordererd list
+redactor2_profiles_plugins_paragraph_description = Inserts a paragraph
+redactor2_profiles_plugins_properties_description = Inserts a custom ID or class into the currently selected block
+redactor2_profiles_plugins_redo_description = Repeats the previous action
+redactor2_profiles_plugins_source_description = Switches to the HTML view
+redactor2_profiles_plugins_styles_description = Allows defining custom inline tags to use in the editor
+redactor2_profiles_plugins_sub_description = Inserts a subscripted string
+redactor2_profiles_plugins_sup_description = Inserts a superscripted string
+redactor2_profiles_plugins_table_description = Inserts a table
+redactor2_profiles_plugins_telephonelink_description = Inserts a tel link
+redactor2_profiles_plugins_textdirection_description = Sets the text alignment
+redactor2_profiles_plugins_underline_description = Underlines the highlighted text
+redactor2_profiles_plugins_undo_description = Undo the previous action
+redactor2_profiles_plugins_unorderedlist_description = Inserts an unordered list
+
+#permissions
+perm_general_redactor2[] = Permissions for the Redactor-Addon
+perm_general_redactor2[profiles] = Permissions for the page 'Profiles' of the Redactor-Addon
