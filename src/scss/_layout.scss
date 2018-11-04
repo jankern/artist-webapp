@@ -291,14 +291,14 @@ p.arallax-container {
     text-align: right;
     position:absolute;
     z-index:9;
-    bottom:0px;
+    bottom:3px;
     right:50%;
     margin-right:-455px;
 
     h1{
         font-size:5.2em;
         margin:0px;
-        color:$base-white-medium;
+        color:$base-black-light;
         @include opacity(0.9);
         line-height:0.5em;
     }

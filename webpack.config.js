@@ -16,7 +16,8 @@ module.exports = env => {
 
     // Entry files to be bundled
     config.entry = {
-        custom: './src/js/index.js'
+        custom: './src/js/index.js',
+        //static: './src/js/static.js'
     };
 
     // Definition and optimization of output chunks
@@ -53,6 +54,7 @@ module.exports = env => {
         new HtmlWebpackPlugin({
             template: './src/static/index.html',
             inject: 'body',
+            chunks: ['vendor', 'custom'],
             chunksSortMode: function (b, a) {  //alphabetical order to define the insert tags
                 if (a.names[0] > b.names[0]) {
                     return 1;
@@ -64,6 +66,13 @@ module.exports = env => {
             }
         }),
 
+        new HtmlWebpackPlugin({
+            template: './src/static/reflexionen.html',
+            inject: true,
+            chunks: ['vendor', 'custom'], 
+            filename: './ausstellungen/reflexionen/index.html'
+        }),
+
         // Write the css income stream to css bundle file(s)
         new MiniCssExtractPlugin({
             filename: 'css/[name].bundle.css',
@@ -72,7 +81,7 @@ module.exports = env => {
 
         // Plugin to copy static web content (files without reference to js or scss files)
         new CopyWebpackPlugin([{
-            from: path.join(__dirname, './src/static')
+            from: path.join(__dirname, './src/static'), ignore: [ '*.html' ]
         }]),
 
         new webpack.ProvidePlugin({
@@ -113,7 +122,8 @@ module.exports = env => {
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[ext]'
+                        name: 'img/[name].[ext]',
+                        publicPath: '/'
                     }
                 }
             }, {
@@ -122,7 +132,8 @@ module.exports = env => {
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'font/[name].[ext]'
+                        name: 'font/[name].[ext]',
+                        publicPath: '/'
                     }
                 }
             }, {
