@@ -144,6 +144,67 @@ section{
     padding:40px 0;
 }
 
+.start{
+    header .header-wrapper a.logo {
+        margin-right: -30px;
+        img{
+            width:84px;
+            height:84px;
+        }
+    }
+}
+
+.start-frame{
+    min-height:100%;
+    z-index: 8;
+    background: transparent;
+    position:relative;
+    .claim{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 900px; 
+        text-align:left;
+        span{
+            font-size: 6em;
+            color: #63BEB7;
+            line-height: 1em;
+            clear: both;
+            font-weight: 700
+        }
+        div{
+            width:100%;
+            text-align:center;
+        }
+        i{
+            vertical-align:-5px;
+        }
+        a.btn{
+            margin: 100px 0 50px 0;
+            background:$base-green;
+            &:hover{
+                @include opacity(0.8);
+            }
+        }
+    }
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 7;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../static/video/bagger-inform.png) no-repeat;
+    background-size: cover; 
+}
+
 .img-text-100{
     width:100%;
 }
@@ -260,10 +321,6 @@ p.arallax-container {
     height: 300px;
 }
 
-.parallax img{
-    
-}
-
 .parallax-title{
     text-align: left;
     position:absolute;
@@ -339,6 +396,25 @@ footer{
             right:20px;
         }
     }
+    .start-frame{
+        .claim{
+            width:100%;
+            box-sizing: border-box;
+            text-align:center;
+            span{
+                font-size:4em;
+            }
+        }
+    }
+    .start{
+        header .header-wrapper a.logo {
+            margin-right: 0px;
+            img{
+                width:40px;
+                height:40px;
+            }
+        }
+    }
     .logo-transition{
         display:none;
     }
@@ -390,6 +466,25 @@ footer{
             right:20px;
         }
     }
+    .start-frame{
+        .claim{
+            width:100%;
+            box-sizing: border-box;
+            text-align:center;
+            span{
+                font-size:4em;
+            }
+        }
+    }
+    .start{
+        header .header-wrapper a.logo {
+            margin-right: 0px;
+            img{
+                width:40px;
+                height:40px;
+            }
+        }
+    }
     .logo-transition{
         display:none;
     }
@@ -427,6 +522,22 @@ footer{
 }
 
 @media screen and (max-width: 600px) {
+    .start-frame{
+        .claim{
+            width:100%;
+            box-sizing: border-box;
+            text-align:center;
+            span{
+                font-size:3em;
+            }
+            a.btn{
+                width:calc(100% - 100px);
+                box-sizing: border-box;
+                margin-left:50px;
+                margin-right:50px;
+            }
+        }
+    }
     .col20, .col30, .col40, .col50, .col60, .col100{
         width:100%;
         box-sizing: border-box;
@@ -452,6 +563,22 @@ footer{
 }
 
 @media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 3) and (min-device-pixel-ratio: 3) {
+    .start-frame{
+        .claim{
+            width:100%;
+            box-sizing: border-box;
+            text-align:center;
+            span{
+                font-size:3em;
+            }
+            a.btn{
+                width:calc(100% - 100px);
+                box-sizing: border-box;
+                margin-left:50px;
+                margin-right:50px;
+            }
+        }
+    }
     .col20, .col30, .col40, .col50, .col60, .col100{
         width:100%;
         box-sizing: border-box;
@@ -461,5 +588,17 @@ footer{
                 font-size:1em;
             }
         }
+    }
+    h1{
+        font-size:2em;
+    }
+    .info h1{
+        font-size:1.5em;
+    }
+    .parallax-container h1 {
+        font-size:2.3em;
+    }
+    .parallax-container h2 {
+        font-size:1.9em;
     }
 }
