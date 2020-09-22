@@ -49,48 +49,58 @@ module.exports = env => {
     config.plugins = [];
 
     config.plugins.push(
+      // Automated assignment if bundling files to an index.html -> the file can be opened in a browser for test porposes
+      new HtmlWebpackPlugin({
+        template: "./src/static/index.html",
+        inject: "body",
+        chunks: ["vendor", "custom"],
+        chunksSortMode: function (b, a) {
+          //alphabetical order to define the insert tags
+          if (a.names[0] > b.names[0]) {
+            return 1;
+          }
+          if (a.names[0] < b.names[0]) {
+            return -1;
+          }
+          return 0;
+        },
+      }),
 
-        // Automated assignment if bundling files to an index.html -> the file can be opened in a browser for test porposes
-        new HtmlWebpackPlugin({
-            template: './src/static/index.html',
-            inject: 'body',
-            chunks: ['vendor', 'custom'],
-            chunksSortMode: function (b, a) {  //alphabetical order to define the insert tags
-                if (a.names[0] > b.names[0]) {
-                    return 1;
-                }
-                if (a.names[0] < b.names[0]) {
-                    return -1;
-                }
-                return 0;
-            }
-        }),
+      new HtmlWebpackPlugin({
+        template: "./src/static/reflexionen.html",
+        inject: true,
+        chunks: ["vendor", "custom"],
+        filename: "./ausstellungen/reflexionen/index.html",
+      }),
 
-        new HtmlWebpackPlugin({
-            template: './src/static/reflexionen.html',
-            inject: true,
-            chunks: ['vendor', 'custom'], 
-            filename: './ausstellungen/reflexionen/index.html'
-        }),
+      new HtmlWebpackPlugin({
+        template: "./src/static/werkschau.html",
+        inject: true,
+        chunks: ["vendor", "custom"],
+        filename: "./ausstellungen/werkschau/index.html",
+      }),
 
-        // Write the css income stream to css bundle file(s)
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].bundle.css',
-            chunkFilename: 'css/[name].bundle.css'
-        }),
+      // Write the css income stream to css bundle file(s)
+      new MiniCssExtractPlugin({
+        filename: "css/[name].bundle.css",
+        chunkFilename: "css/[name].bundle.css",
+      }),
 
-        // Plugin to copy static web content (files without reference to js or scss files)
-        new CopyWebpackPlugin([{
-            from: path.join(__dirname, './src/static'), ignore: [ '*.html' ]
-        }]),
+      // Plugin to copy static web content (files without reference to js or scss files)
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, "./src/static"),
+          ignore: ["*.html"],
+        },
+      ]),
 
-        new webpack.ProvidePlugin({
-            jQuery: 'jquery',
-            $: 'jquery',
-            jquery: 'jquery',
-            'window.$': 'jquery',
-            'window.jQuery': 'jquery',
-        })
+      new webpack.ProvidePlugin({
+        jQuery: "jquery",
+        $: "jquery",
+        jquery: "jquery",
+        "window.$": "jquery",
+        "window.jQuery": "jquery",
+      })
     );
 
     // Module object to keep the info how resources are being loaded
