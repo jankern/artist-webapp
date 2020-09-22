@@ -1,0 +1,4 @@
+2018-11-02 23:54:12 | Warning | count() [<a href='https://php.net/manual/function.count'>function.count</a>]: Parameter must be an array or an object that implements Countable | redaxo/src/addons/sprog/lib/Sprog/Extension.php | 56
+2018-11-03 00:02:56 | Warning | count() [<a href='https://php.net/manual/function.count'>function.count</a>]: Parameter must be an array or an object that implements Countable | redaxo/src/addons/sprog/lib/Sprog/Extension.php | 56
+2018-11-03 00:06:40 | Warning | count() [<a href='https://php.net/manual/function.count'>function.count</a>]: Parameter must be an array or an object that implements Countable | redaxo/src/addons/sprog/lib/Sprog/Extension.php | 56
+2018-11-03 00:06:52 | Warning | count() [<a href='https://php.net/manual/function.count'>function.count</a>]: Parameter must be an array or an object that implements Countable | redaxo/src/addons/sprog/lib/Sprog/Extension.php | 56

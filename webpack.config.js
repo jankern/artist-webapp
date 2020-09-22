@@ -16,7 +16,8 @@ module.exports = env => {
 
     // Entry files to be bundled
     config.entry = {
-        custom: './src/js/index.js'
+        custom: './src/js/index.js',
+        //static: './src/js/static.js'
     };
 
     // Definition and optimization of output chunks
@@ -48,40 +49,58 @@ module.exports = env => {
     config.plugins = [];
 
     config.plugins.push(
+      // Automated assignment if bundling files to an index.html -> the file can be opened in a browser for test porposes
+      new HtmlWebpackPlugin({
+        template: "./src/static/index.html",
+        inject: "body",
+        chunks: ["vendor", "custom"],
+        chunksSortMode: function (b, a) {
+          //alphabetical order to define the insert tags
+          if (a.names[0] > b.names[0]) {
+            return 1;
+          }
+          if (a.names[0] < b.names[0]) {
+            return -1;
+          }
+          return 0;
+        },
+      }),
 
-        // Automated assignment if bundling files to an index.html -> the file can be opened in a browser for test porposes
-        new HtmlWebpackPlugin({
-            template: './src/static/index.html',
-            inject: 'body',
-            chunksSortMode: function (b, a) {  //alphabetical order to define the insert tags
-                if (a.names[0] > b.names[0]) {
-                    return 1;
-                }
-                if (a.names[0] < b.names[0]) {
-                    return -1;
-                }
-                return 0;
-            }
-        }),
+      new HtmlWebpackPlugin({
+        template: "./src/static/reflexionen.html",
+        inject: true,
+        chunks: ["vendor", "custom"],
+        filename: "./ausstellungen/reflexionen/index.html",
+      }),
 
-        // Write the css income stream to css bundle file(s)
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].bundle.css',
-            chunkFilename: 'css/[name].bundle.css'
-        }),
+      new HtmlWebpackPlugin({
+        template: "./src/static/werkschau.html",
+        inject: true,
+        chunks: ["vendor", "custom"],
+        filename: "./ausstellungen/werkschau/index.html",
+      }),
 
-        // Plugin to copy static web content (files without reference to js or scss files)
-        new CopyWebpackPlugin([{
-            from: path.join(__dirname, './src/static')
-        }]),
+      // Write the css income stream to css bundle file(s)
+      new MiniCssExtractPlugin({
+        filename: "css/[name].bundle.css",
+        chunkFilename: "css/[name].bundle.css",
+      }),
 
-        new webpack.ProvidePlugin({
-            jQuery: 'jquery',
-            $: 'jquery',
-            jquery: 'jquery',
-            'window.$': 'jquery',
-            'window.jQuery': 'jquery',
-        })
+      // Plugin to copy static web content (files without reference to js or scss files)
+      new CopyWebpackPlugin([
+        {
+          from: path.join(__dirname, "./src/static"),
+          ignore: ["*.html"],
+        },
+      ]),
+
+      new webpack.ProvidePlugin({
+        jQuery: "jquery",
+        $: "jquery",
+        jquery: "jquery",
+        "window.$": "jquery",
+        "window.jQuery": "jquery",
+      })
     );
 
     // Module object to keep the info how resources are being loaded
@@ -113,7 +132,8 @@ module.exports = env => {
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[ext]'
+                        name: 'img/[name].[ext]',
+                        publicPath: '/'
                     }
                 }
             }, {
@@ -122,7 +142,8 @@ module.exports = env => {
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'font/[name].[ext]'
+                        name: 'font/[name].[ext]',
+                        publicPath: '/'
                     }
                 }
             }, {

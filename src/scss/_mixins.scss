@@ -64,8 +64,15 @@
   }
 
 // mixin for browser compatible element shadow
-@mixin box-shadow($left:0px, $top:2px, $blur:3px, $color:#333, $inset:"") {
-    -webkit-box-shadow:$left $top $blur $color #{$inset};
-    -moz-box-shadow:$left $top $blur $color #{$inset};
-    box-shadow:$left $top $blur $color #{$inset};
+@mixin box-shadow($left:0px, $top:2px, $blur:3px, $d:0px, $color:#333, $inset:"") {
+    -webkit-box-shadow:$left $top $blur $d $color #{$inset};
+    -moz-box-shadow:$left $top $blur $d $color #{$inset};
+    box-shadow:$left $top $blur $d $color #{$inset};
   }
+
+@mixin hyphens($value){
+    -webkit-hyphens: $value;
+    -moz-hyphens: $value;
+    -ms-hyphens: $value;
+    hyphens: $value;
+}
