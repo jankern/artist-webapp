@@ -23,7 +23,7 @@
   "homepage": "https://github.com/jankern/artist-webapp#readme",
   "dependencies": {
     "glob": "^7.1.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0"
   },
