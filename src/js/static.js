@@ -26,7 +26,7 @@ $(function() {
         
         if(width > 992){
             if($(this).scrollTop() >= 5){
-                transitionLogoEl.stop().animate({width:'40px', height:'40px', marginRight: '-450px'});
+                transitionLogoEl.stop().animate({width:'40px', height:'40px', marginRight: '-453px'});
                 transitionAside.stop().animate({marginRight: '-540px'});
                 transitionHeader.stop().animate({opacity:0.5});
             }else if ($(this).scrollTop() <= 40){
