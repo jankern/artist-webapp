@@ -4,6 +4,7 @@
 /bower_components/
 /node_modules/
 /dist/
+/html/resources/dist/
 /.DS_Store
 /composer.lock
 /vendor/
